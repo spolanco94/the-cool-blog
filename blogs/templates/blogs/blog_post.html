@@ -1,0 +1,25 @@
+{% extends 'blogs/base.html' %}
+
+{% block page_header %}
+  <h3 class="display-3">{{ blog.title }}</h3>
+{% endblock page_header %}
+
+{% block content %}
+  <div class="container">
+    <p class="font-italic text-muted">
+      by {{ blog.owner }}
+      <br>
+      {{ blog.date_added|date:'M d, Y h:i A e'}}
+    </p>
+
+    <p class="p-2 px-md-3 lead">
+      {{ blog.text|linebreaks }}
+    </p>
+
+    {% if blog.owner == user %}
+      <a class="btn btn-outline-warning btn-sm"
+        href="{% url 'blogs:edit_post' blog.id %}">Edit Post</a>
+    {% endif %}
+  </div>
+
+{% endblock content %}
