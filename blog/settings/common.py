@@ -42,7 +42,6 @@ INSTALLED_APPS = [
 
     # Third-party apps
     'bootstrap4',
-    'fontawesome_free',
 
     # Django default apps
     'django.contrib.admin',

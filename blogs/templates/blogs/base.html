@@ -14,8 +14,6 @@
 
       {% bootstrap_css %}
       {% bootstrap_javascript jquery='full' %}
-      <link href="{% static 'fontawesome_free/css/all.min.css' %}" rel="stylesheet" type="text/css">
-      <script src="{% static 'fontawesome_free/js/all.min.js' %}"></script> 
       <link rel="stylesheet" type="text/css" href="{% static 'css/styles.css' %}">
     </head>
 
@@ -70,8 +68,8 @@
           {% block content %}{% endblock content %}
         </div>
 
-        <button type="button" class="btn btn-danger btn-floating btn-lg" 
-          id="btn-back-to-top"><i class="fas fa-arrow-up"></i></button>
+        <button type="button" class="btn btn-danger btn-floating btn-lg p-1" 
+          id="btn-back-to-top"><img src="static/img/To-Top-Arrow.svg" width="36px" height="36px"></button>
         </main>
         
         <div class="p-4 m-4">
